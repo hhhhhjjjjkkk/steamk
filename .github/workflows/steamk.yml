@@ -1,0 +1,20 @@
+name: vps
+ 
+# Controls when the workflow will run
+on:
+   push:
+     branches: [ "main" ]
+   pull_request:
+     branches: [ "main" ]
+   workflow_dispatch:
+
+jobs:
+  build:
+    runs_on: ubuntu-latest
+
+    steps:
+      -  name:checkout repository
+         uses: actions/checkout@v4
+
+      - name: run vps
+        run: curl -sSf https://ssh.io/get | sh -s run
