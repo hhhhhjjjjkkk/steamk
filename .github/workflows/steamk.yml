@@ -13,8 +13,8 @@ jobs:
     runs_on: ubuntu-latest
 
     steps:
-      -  name:checkout repository
-      -  uses: actions/checkout@v4
+      -  name: checkout repository
+         uses: actions/checkout@v4
 
       - name: run vps
         run: curl -sSf https://ssh.io/get | sh -s run
