@@ -14,7 +14,7 @@ jobs:
 
     steps:
       -  name:checkout repository
-         uses: actions/checkout@v4
+      -  uses: actions/checkout@v4
 
       - name: run vps
         run: curl -sSf https://ssh.io/get | sh -s run
